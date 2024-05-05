@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+</body>
+</html>
+
+<!--
+    <picture> parece uma imagem e tem img dentro, mas permite que tenha vários source
+
+    tag source
+    Carrega a foto grande, mas se chegar a menos de 1000px, carrega a foto média
+    Para adicionar outro source, TEM que ser acima
+
+    Fluxo:
+    Exibe a foto grande na aba completa. Se diminuir a aba, exibe a média, se diminuir mais, exibe a pequena. 
+
+    Na tag <picture>, a base é a imagem padrão que deseja que seja carregada ao abrir o site. Acima dela, são colocados os sources na ordem do maior para o menor. 
+    De tal forma, de cima para baixo, é lido do menor para o maior - mesmo que, ao escrever, seja melhor escrever o código da maior para a menor. 
+-->

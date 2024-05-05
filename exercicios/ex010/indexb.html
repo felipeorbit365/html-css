@@ -1,0 +1,51 @@
+<!DOCTYPE html> <!-- Segunda parte da aula -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com links</title>
+</head>
+<body>
+    <h1>Usando links externos</h1>
+    <p>Você pode acessar o meu <a href="https://gustavoguanabara.github.io/" target="_blank" rel="external">repositório público no GitHub</a></p>
+    <p>Você também pode acessar o meu <a href="https://youtube.com/cursoemvideo/" target="_blank" rel="external">canal gratuito no YouTube</a></p>
+
+    <h1>Usando links internos</h1>
+    <p>Essa é a primeira página do site. Se você quiser, pode acessar também a minha <a href="pag002.html" rel="next" target="_self">segunda página</a></p>
+    <p>Você também pode acessar a nossa <a href="noticias/pag003.html" rel="next" target="_self">página de notícias</a></p>
+
+    <h1>Links para download</h1>
+    <ul>
+        <li><a href="livro/meulivro.pdf" download="meulivro.pdf" type="application/pdf">Baixar o livro em PDF</a></li>
+        <li><a href="livro/meulivro.zip" download="meulivro.zip" type="application/zip">Livro compactado em ZIP</a></li>
+    </ul>
+</body>
+</html>
+
+<!--
+    Links internos fazem relação com páginas que compõem o próprio servidor, isto é, condiz com a própria página. Logo, é preciso que tenha mais de uma página para acesso.
+
+    O index deve ser capaz de chamar as outras páginas. 
+
+    Os links internos são indicados através de <a href=""</a> também, mas não precisa indicar a URL inteira, apenas o nome do arquivo, contanto que a página esteja na mesma pasta do index. Abre na própria aba, sem abrir outra.
+
+    rel="next" indica que deve ir à próxima página, avançando
+    - Isso ajuda o Google a saber o sistema de navegação do site
+
+    href="noticias/pag003.html"
+    - Indica que o link está na pasta noticias.
+    - É preciso informar o caminho que esteja dentro de uma pasta 
+
+    target="_self"
+    - Indica que deve continuar na mesma página, na própria aba
+
+    a href="#"
+    - Indica que o link está vazio
+
+    download="meulivro.pdf" type="application/pdf"
+    download="meulivro.zip" type="application/zip"
+    - Utilizado para fazer download de arquivos
+    - iana.org/assignments/media-types (lista de media types)
+    - type="application/ -> é utilizado para PDF ou ZIP, por exemplo
+    - É necessário para fazer com que o navegador baixe o arquivo
+-->

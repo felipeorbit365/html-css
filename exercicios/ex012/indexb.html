@@ -1,0 +1,39 @@
+<!DOCTYPE html> <!-- Aula 6 do Capítulo 11 -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Esse vídeo está hospedado no meu próprio servidor.</p>
+    <video width="560" poster="imagens/limoes-capa.png" controls autoplay loop>
+        <source src="midia/meu-video.mp4" type="video/mp4">
+        <source src="midia/meu-video.m4v" type="video/mp4">
+        <source src="midia/meu-video.webm" type="video/webm">
+        <source src="midia/meu-video.ogv" type="video/ogg">
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+    </video>
+    
+    <h1>Inserindo vídeos do YouTube</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/_JgwyxF2vfE?si=jucuKJQ_-0dVFzsB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h1>Inserindo vídeos do Vimeo</h1>
+    <iframe src="https://player.vimeo.com/video/197093965?h=7fbc516b5a&color=ff9933&portrait=0" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>
+
+<!-- 
+    Para inserir vídeos do YouTube, basta ir até o vídeo e incorporar copiando o código. Depois, só colar no código HTML.
+    Ao apertar play no vídeo, consome dados do YouTube, não do servidor do site. 
+    Colocar vídeos no YouTube também aumenta a abrangência no Google.
+    Assim, criar o vídeo, publicar no YouTube e incorporar ao site é uma boa ideia. 
+    Atenção: nesse caso, qualquer pessoa pode assistir os vídeos. Por estar no YouTube, o acesso é público.
+    No modo não-listado não quer dizer que ninguém tem acesso, pois na verdade tem sim, só não é possível encontrar na busca. É possível incorporar o vídeo mesmo assim e qualquer pessoa poderia assistir. 
+    O YouTube também pode ter outros problemas como a recomendação de outros vídeos. Uma empresa, por exemplo, não quer que seu vídeo recomende o de seu concorrente, por exemplo.
+
+    Como alternativa, é possível usar o Vimeo, que permite que os vídeos sejam privados. Por exemplo, numa plataforma por assinatura, seria interessante usar o Vimeo e permitir que apenas os assinantes vejam. A qualidade é ótima, mas o vídeo dá umas travadas caso a internet não seja tão boa, pois o codec do Vimeo não é tão bom.
+    No Vimeo, basta só copiar e colar o código incorporado também.
+    Também só consome os dados do Vimeo.
+-->

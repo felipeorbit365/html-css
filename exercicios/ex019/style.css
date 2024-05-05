@@ -1,0 +1,40 @@
+@charset "UTF-8"; /* Capítulo 15 - Aula 01 */
+
+body {
+    background-color: rgb(205, 255, 203);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: rgb(4, 109, 0);
+}
+
+h1#principal {
+    text-align: center;
+    background-color: rgb(4, 109, 0);
+    color: white;
+}
+
+h2 {
+    color: rgb(51, 77, 49);
+}
+
+/*
+    Para fazer mudanças diferentes num elemento, como somente um <h1> especificamente e não todos do código, é necessário utilizar identificador.
+
+    No código HTML, este deve ser representado junto com a tag em questão, utilizando id=""
+    -> Exemplo: <h1 id="principal">
+
+    No código CSS, este é representado com um seletor com uma cerquilha com o identificador, utilizando #
+    -> O seletor pode ser, por exemplo: h1#principal ou simplesmente #principal
+    Esse diferente estilo pode ser associado com qualquer parte do código, desde que faça uso do identiticador. Ou seja, as características de um seletor #principal não necessariamente podem ser utilizadas somente em <h1>, mas sim qualquer tag que contenha o identificador corrrespodente para que possa ser aplicado.
+    Entretanto, isso não é uma boa prática. Deve existir apenas um identificador em todo o código HTML.
+
+    Em resumo, o seletor personalizado é aplicado somente ao elemento que faz uso do identificador. Isso diferencia dos demais, criando a diferente aplicação específica de estilo. 
+    - Exemplo: há vários <h1>, mas um deles precisa ser diferente. Não é desejado que todos os <h1> tenham o mesmo estilo.
+
+    É permitido usar somente um id="" por documento HTML. 
+    O uso de classes é o indicado para a alteração personalizada do estilo de VÁRIAS elementos específicos.
+
+    As classes em HTML são class e no CSS são representadas um ponto .
+*/

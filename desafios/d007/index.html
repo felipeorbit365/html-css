@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem flexível</title>
+</head>
+<body>
+    <h1>Imagem Flexível</h1>
+    <p>Você está vendo a imagem completa? Experimente ampliar o tamanho da sua janela para aproveitar a melhor experiência!</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/paisagem-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/paisagem-m.png" type="image/png">
+        <img src="imagens/paisagem-g.png" alt="Foto grande">
+    </picture>
+</body>
+</html>
+
+<!--
+    É importante que exista uma ordem entre os <source> e, nessa nossa configuração, os itens mais acima sejam os menores tamanhos para max-width e que os seguintes sejam maiores, de forma crescente. 
+    O último item dentro de <picture> deve ser a imagem padrão. 
+
+    Sendo assim, para fazer com que uma imagem diminua de acordo com a aba, é necessário:
+
+    <picture>
+    - A tag possibilita que sejam adicionados vários source (os diferentes tamanhos da imagem)
+
+    source:media:type
+    - Exemplo: <source media="(max-width: 750px)" srcset="imagens/paisagem-p.png" type="image/png">
+    max-width indica o limite da largura para a exibição da imagem (se for menor ou igual a 750px, por exemplo, mostra a imagem pequena)
+    Se a largura da tela for maior que 750px, o navegador procurará outra fonte de imagem especificada dentro do elemento <picture> ou usará a imagem padrão especificada na tag <img>.
+
+    <img>
+    - Tag para exibição da imagem padrão
+-->

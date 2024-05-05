@@ -1,0 +1,29 @@
+<!DOCTYPE html> <!-- Capítulo 16 - Aula 07 -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borda personalizada</title>
+    <style>
+        h1 {
+            border: 12px solid transparent; /* Necessário apra "segurar a borda. Pode ser black ou transparent */
+            padding: 10px;
+            border-image-source: url('borda.png'); /* Aqui deve ser colocado o arquivo da borda personalizada. Eu não o produzi, mas precisaria ter */
+            border-image-slice: 27; /* Fatia a borda */
+            border-image-repeat: repeat; /* Repete a imagem por toda a borda. Poderia ser stretch também, esticando a linha no lugar para configurar a espessura da borda */ 
+
+            /* Shorthand de border-image:
+            
+            border-image: url('borda.png') 27 repeat;
+            - Na ordem: source, slice, repeat
+            - Forma alternativa de fazer, no lugar das 3 linhas
+            
+            */
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de borda</h1>
+</body>
+</html>

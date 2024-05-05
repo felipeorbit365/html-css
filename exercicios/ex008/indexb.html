@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação de Textos</title>
+    <style>
+        mark {
+            background-color: lime;
+        }
+    </style>
+</head>
+<body>
+    <h1>Principais formatações</h1>
+    <h2>Negrito / Destaque</h2>
+    <p>Nessa frase temos um <b>termo em negrito</b> usando a tag B (não semântica, relativa à forma, não ao significado)</p>
+    <p>Nesta frase, temos um <strong>termo em destaque</strong> usando a tag STRONG (semântica, relativa ao significado e não à forma)</p>
+    <h2>Itálico / Ênfase</h2>
+    <p>Nesta frase, temos um <i>termo em itálico</i> usando a tag I (não semântica)</p>
+    <p>Nesta frase, temos um <em>termo em ênfase</em> usando a tag EM (semântica)</p>
+    <h2>Texto marcado</h2>
+    <p>Podemos criar também um <mark>texto marcado</mark> usando a tag MARK.</p>
+    <p>E no outro parágrafo, temos <mark>outro texto marcado</mark> no final</p>
+    <h2>Texto grande e pequeno</h2>
+    <p>Estamos criando um <big>texto grande</big> e um <small>texto pequeno</small> nesse parágrafo.</p>
+    <h2>Texto deletado</h2>
+    <p>Podemos marcar <del>um texto como excluído</del> para indicar que ele deve ser lido, mas não considerado.</p>
+    <h2>Texto sobrescrito</h2>
+    <p>Para inserir coisas do tipo x<sup>20</sup>+3</p>
+    <h2>Texto subscrito</h2>
+    <p>Para inserir coisas do tipo H<sub>2</sub>0</p>
+    <h2>Texto inserido</h2>
+    <p>Podemos marcar <ins>um texto como inserido</ins> para dar uma ênfase e indicar que ele foi adicionado depois.</p>
+    <p>Existe também o <u>sublinhado</u> com a tag U (não semântica), mas está obsoleta.</p>
+    <h2>Diferença entre as tags semânticas e não-semânticas</h2>
+    <p>As duas aparecem da mesma forma, com a exata mesma formatação, mas uma possui sentido e a outra não.</p>
+    <p>As não-semânticas (sem sentido, relativas à forma) estão obsoletas e sua utilização não é mais recomendada.</p>
+</body>
+</html>
+
+<!-- 
+    Continuação do exercício 8, mas agora na aula 3 e não na 2
+
+    ---
+
+    Diferença de uso do estilo no CSS - Colocando style dentro da tag ou colocando style dentro do documento:
+
+    Nesse exercício, o marcador tem como padrão a cor amarela. Entretanto, caso queira mudar a cor, não é possível no HTML, já que tudo que diz respeito à forma é tratado nas CSS.
+
+    Uma forma de resolver isso pontualmente no código é através da própria tag. Ficaria: <mark style="background-color: lime;">
+    O parâmetro style="" é compatível com quase todas as tags, então nesse caso seria possível utilizar o CSS de uma maneira mais simplificada, mudando a cor do marcado nesse momento para lime.
+
+    No entanto, é importante se atentar ao fato de que, como no exemplo, caso mark seja utilizado novamente, ele não herda a característica utilizada anteriormente. A alteração teria sido feita somente na parte em que foi indicada naquele outro momento. A cor mudaria somente para um <mark>.
+
+    Para que a cor mude em todos os marcadores, é necessário utilizar as CSS de forma mais apropriada. Para isso, cria-se uma tag <style> no <head> do código. Todos os <mark> ficam somente como <mark> a alteração é feita de modo com que seja criado um seletor CSS para <mark>, mudando a cor para todas as vezes que <mark> seja utilizado.
+
+    A forma com o seletor CSS é a melhor para que a alteração sirva para os seletores de toda a página em questão. 
+
+    ---
+
+    Porquê <big> está obsoleto e <small> não, considerando que ambos são do HTML4:
+
+    O HTML5 enfatiza o uso de marcações para significado (semântica) em vez de apresentação, que deve ficar a cargo do CSS.
+    
+    A tag <small>, embora também influencie a apresentação do texto, foi mantida no HTML5. Isso ocorre, em parte, porque ela pode ser usada para expressar um significado semântico adicional, como texto de aviso legal ou de direitos autorais, onde o tamanho menor do texto serve para diferenciar visualmente o conteúdo sem alterar seu significado intrínseco. Por outro lado, <big> não.
+        
+    Assim, enquanto <big> foi removido por falta de valor semântico e sua função puramente estilística, <small> encontrou um nicho onde oferece tanto estilo quanto significado, alinhando-se mais estreitamente com os objetivos do HTML5.
+-->

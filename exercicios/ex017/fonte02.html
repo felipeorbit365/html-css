@@ -1,0 +1,43 @@
+<!DOCTYPE html> <!-- Aula 10 do Capítulo 14 -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamentos</title>
+    <style>
+        body {
+            font: normal 16px Arial, Verdana, serif;
+            text-align: left;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: right;
+        }
+
+        p {
+            text-align: justify;
+            text-indent: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tipos de alinhamentos</h1>
+    <h2>Subtítulo</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, debitis nam obcaecati expedita similique perspiciatis mollitia accusamus iusto animi quo laboriosam impedit fuga totam illo tempore et nesciunt? Error, dolorem? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique harum aliquam quam aut impedit quisquam suscipit ad! Dolor quisquam inventore excepturi. Architecto temporibus excepturi molestias tempora quam earum eaque! Distinctio? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, fugit iure molestiae reprehenderit dolorum magni. Ab adipisci delectus enim magni est, impedit culpa voluptatem id voluptatum. Architecto eligendi laudantium nesciunt!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quis nisi recusandae temporibus, accusamus deleniti inventore sunt nesciunt corporis aut, beatae sint. Illo quibusdam optio in, est pariatur sunt quisquam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum itaque provident, fuga reprehenderit aliquam aliquid doloribus distinctio, accusamus expedita adipisci minima. Voluptatem numquam delectus, voluptates quaerat magni dolores incidunt in! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, rerum unde consequatur assumenda reprehenderit aliquid veritatis magnam iste accusamus doloribus praesentium provident animi in temporibus itaque quaerat. Ratione, reprehenderit minima.</p>
+</body>
+</html>
+
+<!--
+    Mesmo que uma tag faça parte de outra tag, o que vale é o último a ser configurado
+    - Apesar do <h1> fazer parte do <body>, por exemplo, o que foi configurado para o <h1> é o que prevalece
+
+    Nesse modo, todo <h1>, <h2>, <p>, entre outros, que estiverem com as características dos seletores, serão automaticamente alterados de acordo.
+    Entretanto, pode haver necessidade de fazer com que, por exemplo, um <h2> seja para direita e outro <h2> seja para a esquerda. Assim, não é possível.
+    Para isso, é preciso utilizar identificadores e classes. De tal modo, cada <h2> poderia ser de um jeito diferente e não do mesmo.
+-->

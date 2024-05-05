@@ -1,0 +1,62 @@
+<!DOCTYPE html> <!-- Capítulo 16 - Aula 03 -->
+<html lang="pt-br"> <!-- Simplica as propriedades com Shorthands -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        h1 { /* Box-level */
+            background-color: lightgray;
+
+            height: 300px;
+            width: 300px;
+
+            border: 10px solid darkslategray;
+
+            padding: 10px; 
+
+            margin: 20px auto 40px auto; /* Centraliza a caixa na direita e esquerda com o auto */
+
+            outline: 5px dashed salmon;
+        }
+
+        a { /* Inline-level */
+            border-width: 10px;
+            border-style: solid;
+            border-color: red;
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos também são exemplos de box-level, mas os <a href="#">links são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona.</p>
+</body>
+</html>
+
+<!-- 
+    Shorthand de Padding
+    - Funciona como o sentido horário de um relógio (cima, direita, baixo, esquerda)
+    - Se todas as medidas forem iguais, é possível escrever apenas uma vez. Assim, ainda valerá para todos os lados. Um valor vale para todos os lados
+    - Quando são dois valores: o de cima e o de baixo ficam iguais, o da esquerda e o da direita também ficam iguais
+
+    Shorthand de Margin
+    - Também segue e deve ser indicado como o sentido horário de um relógio
+
+    Shorthand de Outline
+    -  width -> style -> color
+
+    display
+    - Muda a característica normal de um elemento
+
+    ---
+
+    Relembrando:
+
+    Shorhand de Font
+    - style -> variant -> weight -> size/line-height -> family
+-->

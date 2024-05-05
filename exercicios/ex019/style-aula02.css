@@ -1,0 +1,96 @@
+@charset "UTF-8"; /* Capítulo 15 - Aula 02 */
+
+body {
+    background-color: #d6fde9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: #1e402f;
+}
+
+h1#principal {
+    text-align: center;
+    background-color: #3c805e;
+    color: white;
+}
+
+h2 {
+    color: #3c805e;
+}
+
+.basico {
+    color: #3c805e;
+}
+
+.intermediario {
+    color: #80793c;
+}
+
+.avancado {
+ color: #803c3c;
+}
+
+.destaque {
+    background-color: #c5c56070;
+}
+
+/*
+    Dentro de um mesmo documento HTML, só é possível utilizar um único identificador. Não é permitido usar mais de um. 
+    Por essa razão, são utilizadas classes, já que cada identificador deve ser único dentro de uma página HTML.
+    Diferentemente dos IDs, que são únicos e destinam-se a identificar um único elemento, as classes podem ser aplicadas a qualquer número de elementos em todo o documento HTML.
+
+    Quando são dois ou mais elementos, com o objetivo de aplicar a mesma configuração de estilo neles, se utiliza classes.
+
+    Classe faz a configuração personalizada e é permitido ter vários elementos com a mesma classe.
+
+    Identificador é único, classe é múltiplo.
+
+    Classes devem ser nomeadas por sua funcionalidade, não forma. Por exemplo, não se deve chamar uma classe pelo nome da cor do estilo. 
+
+    Nas classes, normalmente não se coloca o nome do elemento. Apenas o nome da classe representado com o pontinho já basta.
+
+    ---
+
+    Ao colocar somente o nome da classe, sem colocar o nome do elemento, é possível fazer alterações utilizando a tag <span>, dentro do código HTML.
+
+    Exemplo - CSS: 
+
+    .basico {
+        color: #3c805e;
+        font-weight: bold;
+    }
+
+    - Essa parte define que as classes basico fiquem em negrito, sem especificar o elemento. No código HTML, é possível fazer alterações utilizando isso em qualquer coisa, já que o elemento não foi especificado. 
+
+    Exemplo - HTML:
+    Envelopando uma parte do parágrafo com o negrito esverdeado da classe basico no meio do texto de um parágrafo com a tag <span>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit maiores, quam illo molestias <span class="basico">nisi architecto et blanditiis</span> dolores quibusdam in iusto eum deleniti debitis numquam dolor velit tempore nihil libero.</p>
+
+    O trecho "nisi architecto et blanditiis" está em negrito esverdeado, característica da classe .basico
+
+    ---
+
+    É possível aplicar mais de uma classe ao mesmo elemento. 
+    Exemplo: <h2 class="avancado destaque"
+    Sem vírgula, sem nada, apenas o espaço. Assim, as classes avancado e destaque são aplicadas.
+
+    Também é possível fazer o mesmo com classes e identificadores.
+    Exemplo: <h1 id="principal" classe="destaque">
+    Entretando, nesse caso, identificador sobrepõe classe, caso estejam alterando a mesma coisa (o fundo, por exemplo).
+
+    ---
+
+    Hierarquia
+    - Primeiro se configura o genérico, que vale para todos
+    - Se é alterado um color, por exemplo, o identificador sobrepõe o genérico
+    - O mesmo vale para classes, ele herda a alteração, mas o identificador sobrepõe
+
+    ---
+
+    id -> # -> Só pode ser utilizado uma vez por documento HTML
+    class -> . -> Pode ser utilizado em vários elementos
+
+    O mesmo id pode aparecer em diferentes documentos, mas dois não podem aparecer no mesmo. Em outras páginas, tudo bem. 
+*/

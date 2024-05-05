@@ -1,0 +1,61 @@
+<!DOCTYPE html> <!-- Segunda parte da aula -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+
+    <h1>Reproduzindo áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <audio preload="metadata" autoplay controls loop>
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.ogg" type="audio/ogg">
+        <source src="midia/guanacast-33.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/guanacast-33.mp3">Clique aqui para baixar o arquivo MP3.</a> </p>
+    </audio>
+</body>
+</html>
+
+<!--
+    A tag <audio> serve para adicionar áudio em HTML5
+    - É necessário que tenha: controls autoplay -> faz com que um controle, uma caixa de reprodução, apareça para que o áudio possa ser reproduzido.
+    
+    Forma limitada, que pode não ter compatibilidade com todos os navegadores:
+    <audio src="midia/happy-mistake.mp3" controls autoplay></audio>
+    
+    ---
+
+    A tag <audio> com vários <source> dentro é importante para gerar essa compatibilidade. 
+    A ordem é importante, então é importante saber que segue uma ordem de cima para baixo de tentativas de reprodução de acordo com a compatibilidade.
+    Se nenhum funcionar, é indicado através do <p> que o navegador é incapaz de reproduzir áudio e indica uma forma alternativa de baixar o arquivo.
+
+    ---
+
+    preload="auto"
+    - Considera que o site só terminou de carregar depois que o carregamento do áudio terminar também. É o padrão, mas é ruim por conta desse motivo.
+
+    preload="metadata"
+    - Carrega só as informações do arquivo, como data e duração. Dá possibilidade de apertar o play no botão, mas demora um pouco mais para carregar, pois o download é feito no momento que se aperta o botão.
+
+    preload="none"
+    - Não carrega nada, só quando o usuário apertar play no botão.
+
+    ---
+
+    loop 
+    - Faz o áudio ser tocado repetidas vezes, como se fosse uma música de fundo do site. 
+
+    ---
+
+    Arquivos .wav
+    - Existe compatibilidade, mas é muito pesado. É melhor evitar para entregar uma visualização e carregamento superior do site ao usuário. Arquivos muito pesados não são bons, não importa o quão melhor a qualidade do áudio seja. 
+-->

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente em CSS</title>
+    <style>
+        * { /* Configurações globais das CSS */
+            height: 100%;
+        }
+
+        body {
+            background-image: linear-gradient(to right, #3198E2, #6D59C0, #B93590, #E33F5F, #FDD579);
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testanto Gradiente</h1>
+</body>
+</html>
+
+<!--
+    Gradientes em CSS
+
+    backgroud-image: linear-gradient();
+    - Função interna que faz um gradiente linear
+    - Indica a direção e as cores desejadas
+    - Direções: to right, to left, to top, to bottom, 95deg, 45deg, -45deg, entre outros
+    - Exemplo: background-image: linear-gradient(to right, red, blue, purple)
+    - Também tem como adicionar porcentagem para a cor ocupar o gradiente
+
+    backgroud-image: radial-gradient();
+    - O gradiente pode ser com radial, no lugar de ângulo
+    - Exemplo: backgroud-image: radial-gradient(circle, red, blue, purple);
+    
+    background-attachment: fixed;
+    - Mantém o gradiente fixo na tela na hora que rolar o mouse
+-->

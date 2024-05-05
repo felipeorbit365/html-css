@@ -1,0 +1,101 @@
+<!DOCTYPE html> <!-- Aula 05 do Capítulo 14 -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        body {
+            font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+            font-size: 1em;
+        }
+
+        h1 {
+            font: italic bolder 3em 'Work Sans', sans-serif;
+        }
+
+        h2 {
+            font: bold 2em 'Work Sans', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sunt harum accusamus nam est nisi eveniet eum quos repudiandae fugit! Atque voluptatem laborum esse molestiae a quam pariatur, quia ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus totam natus, mollitia cupiditate iste facere aliquam corrupti ipsam cumque illum perspiciatis soluta neque, unde, odit veniam! Animi, labore! Laboriosam, at?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi nesciunt sunt, beatae debitis doloremque nisi veniam corporis, fuga commodi repellat magnam iste, ea quidem amet quas molestiae unde recusandae. Voluptates.</p>
+    <h2>Subtítulo do exercício</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla cumque atque harum quaerat, in cupiditate sunt blanditiis. Animi nobis qui asperiores ab amet exercitationem adipisci explicabo ipsa dicta. Vitae, nostrum.</p>
+</body>
+</html>
+
+<!-- 
+    Para fontes com mais de duas palavras no nome, escrever entre aspas simples
+    - Exemplo: 'Work Sans';
+
+    Peso de fontes
+    - font-weight: ;
+    - lighter, normal, bold, bolder
+    - Também pode ser numérico, entre 100 e 900, possibilitando diferentes nuances entre os pesos. Entretanto, é necessário verificar se a fonte suporta esses pesos, pois não são todas que são compatíveis.
+    - Numéricos -> 100, 200, 300, 400, 500, 600, 700, 800 e 900
+    - A fonte do <h1> geralmente está em negrito, então font-weight: normal; faz com que o negrito do <h1> não aconteça
+
+    font-style: ;
+    - normal ou italic
+    - A fonte do <h1> geralmente está em negrito, então a fonte também tem que ter variação de itálico e negrito
+    - Desse modo, não precisa mais usar as tags de HTML
+    
+    texto-decoration: ;
+    - underline
+    - Deixa o texto sublinhado
+
+    A grande maioria dessas fontes não tem esses recursos, então é importante verificar. 
+    A família de fonte PRECISA habilitar essas configurações para que seja utilizada.  
+
+---
+
+    Exemplo:
+
+    <style>
+        body {
+            font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            font-weight: lighter;
+            font-style: italic;
+            text-decoration: underline;
+        }
+    </style>
+
+---
+
+    Shorthand Font
+    - Uma versão condensada das configurações
+    - Pode ser utilizado no lugar das várias linhas indicando no seletor
+    - Há uma ordem para indicação e ela precisa ser seguida
+
+    Ordem do Shorthand Font
+    font-style -> font-weight -> font-size -> font-family 
+
+---
+
+    Diferença entre o seletor com várias linhas e o Shorthand Font
+
+    Sem Shorhand Font:    
+        h1 {
+            font-family: 'Work Sans', sans-serif;
+            font-weight: bolder;
+            font-size:  3em;
+            font-size: italic;
+        }
+    
+    Com Shorthand Font:
+        h1 {
+            font: italic bolder 3em 'Work Sans', sans-serif;
+        }
+
+    
+    A propriedade Shorthand permite que seja permitido escrever várias coisas numa única linha.
+
+    Não é obrigatório que indique tudo, por exemplo, pode ser que não precise indicar que é italic, desse modo, só ignorar essa parte e continuar seguindo a ordem com os elementos que desejar compor. 
+
+    A ordem é OBRIGATÓRIA. É possível criar Shorthands para fontes sem necessariamente usar todas essas propriedades, contanto que a ordem seja respeitada.    
+-->

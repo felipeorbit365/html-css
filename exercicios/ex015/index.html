@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos Externos</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1 { 
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Capítulo 1</h1>
+    <h2>Capítulo 1.1</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat labore autem commodi quidem sapiente officia iste, magni soluta alias tempora ea perspiciatis debitis, similique laboriosam quia ab laborum hic. Iure?</p>
+    <h2>Capítulo 1.2</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut alias laboriosam, enim, doloribus repudiandae reprehenderit veniam nisi natus magnam officia iure similique repellat possimus praesentium maxime! Explicabo nisi quam ducimus?</p>
+    <h1>Capítulo 2</h1>
+    <h2>Capítulo 2.1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit magnam assumenda fuga dolorem iste harum repellendus architecto? Nesciunt eaque delectus in non repellat. Enim dolorum praesentium amet rerum sunt.</p>
+    <p style="text-align: right;"><a href="pagina02.html" target="_self">Ir para a página 2</a></p>
+</body>
+</html>
+
+<!--
+    Nos estilos externos, as aplicações de <style> ficam em outro arquivo. 
+
+    No modo anterior, o estilo só funciona para uma única página. Caso queira o mesmo estilo nas outras páginas, é necessário copiar e colar em cada uma das páginas. Entretanto, isso não é prático. Caso queira fazer alterações, seria necessário alterar manualmente em tudo.
+
+    Se existem várias páginas e elas seguem o mesmo estilo, são utilizados os estilos CSS externos. 
+
+    Para utilizar CSS externas, utiliza-se link:css no <head>, no lugar que seria o <style>.
+
+    É um arquivo exclusivo para colocar os estilos e relacioná-lo às páginas. Isso resolve o problema de copiar e colar e fazer 
+    alterações dos modos anteriores. 
+
+    Estilos CSS externos são a melhor forma para utilização de várias páginas e mudanças maiores. 
+
+    <link rel="stylesheet" href="style.css">
+    - Link para o CSS externo
+
+    <link rel="stylesheet" href="extra.css">
+    - É possível fazer relação com vários arquivos de estilos CSS, como por exemplo, alterações extra que só algumas páginas possuem. 
+    - Os diferentes arquivos de estilos são adicionados, um não substitui o outro. Ambas as modificações são feitas. 
+
+    Diferença entre as técnicas:
+
+    Inline
+    - Evitar ao máximo
+    - Utilizado APENAS para alterações pontuais, muito pequenas, em apenas um arquivo. De modo com que seja necessária SOMENTE numa única parte da página em questão.
+    - Ainda assim, é preferível utilizar estilos internos com <style> nesses casos 
+
+    Internos 
+    - Colocados através do <style> no <head>
+    - Para estilos pequenos em uma página só
+    - Se forem muitos estilos, não deve ser utilizado. Deve virar externo
+
+    Externos 
+    - Para quando existe mais de uma página no projeto
+    - O mais versátil
+    - Utilizado para muitos estilos
+    - Estilos de fácil adaptação e aplicação em várias páginas
+    - Faz alteração em todas as páginas que tiverem relação com o arquivo
+    - É possível utilizar mais de um arquivo CSS para fazer configurações de estilo. Exemplo: style.css e extra.css, eles se COMPLEMENTAM
+
+    ---
+
+    Ordem de prevalência em alterações:
+    - Inline > Interno > Externos
+    - No sentido de que qual alteração é mais priorizada caso exista duas ou mais configurações de estilos diferentes para a mesma coisa
+    - Exemplo: se o style.css alterar o background-color para ser azul em todas as páginas, todas as páginas terão fundo azul. Entretanto, se numa das páginas tiver uma alteração de estilo inline falando que naquela página o fundo será rosa, a alteração inline prevalece e nessa página em específico o fundo será rosa
+    - Existe hierarquia 
+    
+    ---
+
+    É possível misturar todas as formas. 
+
+    O <style> dessa página, por exemplo, faz com que apenas os textos dessa página sejam sublinhados. Os das restantes não, ainda que tenham estilos em comum por conta da relação com os estilos do arquivo style.css na página.
+
+    O style="text-align: right;" no último <p> é um CSS inline que faz uma alteração muito pontual nesse único parágrafo da página. Ele faz com que na página 1, que tem a alteração, o texto apareça à direita. Entretanto, como essa alteração não existe na página 2, o texto da outra página aparce alinhado à esquerda, normalmente.
+
+    No mesmo arquivo é possível usar CSS externo, interno e inline. 
+    Entretanto, há uma indiferença entre como se sobressai nas páginas.
+    - O inline prevalece, sua alteração está acima de todos
+    - Depois prevalece o CSS interno
+    - Por último prevale o CSS externo, mesmo sendo o mais versátil e o que suas configurações servem para todas as páginas do projeto. 
+
+    ---
+
+    link:css
+    - Essa linha leva para o arquivo CSS que tem as configurações de estilo. Faz a relação para todas páginas que  tenham essa parte.
+
+    ---
+
+    Estilos Inline: São estilos aplicados diretamente no atributo style de um elemento HTML. Eles têm a maior prioridade porque são aplicados diretamente ao elemento, sobrescrevendo outros estilos aplicados através de seletores menos específicos ou que estejam definidos em folhas de estilo externas ou internas.
+
+    Estilos Internos: Estes são estilos definidos dentro de uma tag <style> no próprio documento HTML. Eles têm precedência sobre os estilos definidos em folhas de estilo externas, mas são sobrescritos por estilos inline aplicados diretamente aos elementos.
+
+    Estilos Externos: São aqueles definidos em arquivos externos (como style.css) e vinculados ao documento HTML através da tag <link>. Esses estilos são aplicados a menos que sejam sobrescritos por estilos internos ou inline mais específicos.
+-->
