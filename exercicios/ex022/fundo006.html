@@ -1,0 +1,57 @@
+<!DOCTYPE html> <!-- Capítulo 19 - Aula 05 -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            background-color: black;
+            background-image: url('imagens/wallpaper002.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        main {
+            background-color: white;
+            width: 400px;
+            padding: 10px;
+            margin: auto;
+            border: 1px solid darkblue;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Teste de Imagem de Fundo</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi ratione alias autem necessitatibus nesciunt accusamus animi eaque? Ex autem, culpa officia, molestiae quam doloribus asperiores delectus, sit maiores id minus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim error eius quos possimus placeat ipsum, quasi doloremque nostrum voluptatibus quas accusamus similique inventore saepe veritatis doloribus reprehenderit velit optio sunt. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae unde dolores magnam alias dicta rem facere reprehenderit at, saepe beatae blanditiis fugit voluptatum tempora. Expedita similique deleniti perspiciatis quisquam recusandae!</p>
+    </main>
+</body>
+</html>
+
+<!--
+    É ideal ter uma cor no fundo, mesmo com imagens, pois o HTML carrega para o usuário antes das imagens. A cor serve para ter algo visual enquanto não carrega.
+
+    background-size: contain;
+    - Faz com que a imagem seja 100% exibida
+    - Não é tão bom, pois dependendo da forma que a janela está, são criadas barras
+    - Se diminuir a largura da janela: cria barras em cima e em baixo
+    - Se diminuir a altura da janela: cria barras laterais
+    - Mostra 100% da imagem, indepentemente, mas tentando adaptar ao tamanho da tela sem cortar
+
+    background-size: cover;
+    - Faz caber a imagem, independetemente do tamanho da janela
+    - Não mostra a imagem toda exatamente, pois algumas partes são cortadas
+    - Cobre a imagem inteira, mesmo que para isso picote um pouco a imagem (na posição center center são as partes laterais ou a parte de cima, por exemplo)
+    - Adapta o fundo de acordo com o tamanho da janela/viewport
+    - Não exibe 100% da imagem, mas ocupa 100% da viewport
+    - Faz cortes, mas preenche a tela inteira
+
+    background-size: auto;
+    - Automatico, o navegador se vira para exibir a imagem
+
+    background-size: tamanho fixo em pixels ou em porcentagem;
+-->
