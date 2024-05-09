@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamento</title>
+</head>
+<body>
+    <style>
+        body {
+            height: 98vh;
+            border: 1px dashed black;
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-size: 100px;
+            background-repeat: no-repeat;
+            background-position: right bottom; 
+        }
+    </style>
+</body>
+</html>
+
+ <!--
+    vh
+    - viewheight
+    - Altura da viewport (aba completa)
+
+    Comentário interessante no YouTube
+    - Ao invés de botar o { height: 98vh; } para não aparecer a barrar de rolagem, basta colocar normalmente { height: 100vh; } e acrescentar a declaração { margin: 0px; } no interior do seletor body. Assim não é preciso ficar testando os valores de vh para cada navegador, devices e suas variações.
+
+    background-position
+    - Organizado em colunas e linhas
+    - Exemplo: right bottom -> coluna da direita na linha de baixo (canto inferior direito)
+    - Coluna: left / right
+    - Linha: top / bottom 
+ -->
