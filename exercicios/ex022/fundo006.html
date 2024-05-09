@@ -1,9 +1,9 @@
-<!DOCTYPE html> <!-- Capítulo 19 - Aula 05 -->
+<!DOCTYPE html> <!-- Capítulo 19 - Aula 05 e 06 -->
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundo fixo de tela</title>
     <style>
         body {
             height: 100vh;
@@ -12,11 +12,12 @@
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
+            background-attachment: fixed;
         }
 
         main {
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
             border: 1px solid darkblue;
@@ -27,6 +28,9 @@
 <body>
     <main>
         <h1>Teste de Imagem de Fundo</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi ratione alias autem necessitatibus nesciunt accusamus animi eaque? Ex autem, culpa officia, molestiae quam doloribus asperiores delectus, sit maiores id minus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim error eius quos possimus placeat ipsum, quasi doloremque nostrum voluptatibus quas accusamus similique inventore saepe veritatis doloribus reprehenderit velit optio sunt. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae unde dolores magnam alias dicta rem facere reprehenderit at, saepe beatae blanditiis fugit voluptatum tempora. Expedita similique deleniti perspiciatis quisquam recusandae!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi ratione alias autem necessitatibus nesciunt accusamus animi eaque? Ex autem, culpa officia, molestiae quam doloribus asperiores delectus, sit maiores id minus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim error eius quos possimus placeat ipsum, quasi doloremque nostrum voluptatibus quas accusamus similique inventore saepe veritatis doloribus reprehenderit velit optio sunt. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae unde dolores magnam alias dicta rem facere reprehenderit at, saepe beatae blanditiis fugit voluptatum tempora. Expedita similique deleniti perspiciatis quisquam recusandae!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi ratione alias autem necessitatibus nesciunt accusamus animi eaque? Ex autem, culpa officia, molestiae quam doloribus asperiores delectus, sit maiores id minus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim error eius quos possimus placeat ipsum, quasi doloremque nostrum voluptatibus quas accusamus similique inventore saepe veritatis doloribus reprehenderit velit optio sunt. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae unde dolores magnam alias dicta rem facere reprehenderit at, saepe beatae blanditiis fugit voluptatum tempora. Expedita similique deleniti perspiciatis quisquam recusandae!</p>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi ratione alias autem necessitatibus nesciunt accusamus animi eaque? Ex autem, culpa officia, molestiae quam doloribus asperiores delectus, sit maiores id minus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim error eius quos possimus placeat ipsum, quasi doloremque nostrum voluptatibus quas accusamus similique inventore saepe veritatis doloribus reprehenderit velit optio sunt. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae unde dolores magnam alias dicta rem facere reprehenderit at, saepe beatae blanditiis fugit voluptatum tempora. Expedita similique deleniti perspiciatis quisquam recusandae!</p>
     </main>
 </body>
@@ -54,4 +58,33 @@
     - Automatico, o navegador se vira para exibir a imagem
 
     background-size: tamanho fixo em pixels ou em porcentagem;
+
+    ---
+    
+    background-attachment: ;
+    - Para rolar com o fundo travado
+    - Um vínculo
+
+    scroll
+    - O fundo rola junto com o conteúdo
+    - Rolou conteúdo, rolou o fundo
+
+    fixed
+    - Com o cover de background-size e o fixed de background-attachment, a imagem continua de acordo com o corpo do site inteiro
+    - O fundo fica parado, mesmo rolando o conteúdo
+
+    ---
+
+    Dessa forma, o conteúdo aparece independentemente do tamanho da imagem (graças a utilização do background-size: cover;)
+
+    ---
+
+    Shorthand de Background
+    - color > image > position > repeat > [size]* > attachment
+    - Exemplo -> background: black url('imagens/wallpaper002.jpg') center center no-repeat cover fixed;
+    - Dessa forma, não precisa escrever em várias linhas. Uma linha para todas as declrações já basta
+    - Apesar da documentação indicar que o size faz parte do shorthand, ele não funciona, então é necessário fazer o background-size à parte, fora do shorhand
+    - Forma alternativa: color > image > position > / > size > repeat > attachment
+    - Colocando uma barra ( / ) entre position e size, o size funciona
+    
 -->

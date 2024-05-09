@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento vertical</title>
+    <style>
+        #container {
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+
+            position: relative;
+            height: 96vh;
+            padding: 10px;
+            background-color: purple;
+        }
+
+        #conteudo {
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+            
+            position: absolute;
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>
+
+<!--
+    Para alinhar verticalmente, é necessária a presença de um container e de um conteúdo
+
+    margin: auto;
+    - Só serve para alinhamento HORIZONTAL
+
+    position: relative;
+    - Todo container, por padrão, é relativo
+
+    position: absolute;
+    - Todo conteúdo, a parte de dentro do container, por padrão, é absoluto
+
+    absolute
+    - Quando o posicionamento é absoluto, é possível configurar o elemento com as propriedades left e top
+    
+    transform
+    - Mexer em qualquer caixa aplicando alguma alteração de transformação nela
+    - Para transformar o "ponto de alinhamento" de uma caixa (mover a caixa), usamos a Propriedade de Estilo transform
+    - Utilizando a propriedade transform é possível manipular visualmente um elemento
+
+    translate
+    - A função de translate serve para mover o elemento para os lados ou para cima/baixo
+    - Número negativo no primeiro valor: mexe para esquerda
+    - Número negativo no segundo valor: mexe para cima
+    - Número positivo no primeiro valor: mexe para direita
+    - Número positivo no segundo valor: mexe para baixo
+
+    ---
+
+    Centralização tanto horizontal, quanto vertical, do componente. Passo-a-passo para centralizar tanto horizontalmente quanto verticalmente um elemento na tela:
+    - Container no posicionamento relativo
+    - Conteúdo no posicionamento absoluto
+    No conteúdo, fazer:
+    - left: 50%
+    - top: 50%
+    - transform: translate(-50%, -50%)
+
+    --- 
+
+    Comentário no YouTube:
+
+    Existe um jeito muito mais fácil de alinhar items, com apenas três linhas, e eu não tô falando isso em tom de crítica, pelo contrário, é sempre bom saber mais de um modo de resolver um problema. Então lá vai:
+
+    #container {
+        display: flex; /*Possui diversas funções (procurem pela documentação), uma delas é habilitar o manejamento do conteúdo*/
+        justify-content: center; /*Alinhamento horizontal, ou seja, dispensa o "margin: auto"*/
+        align-items: center; /*Alinhamento vertical*/
+    }
+
+-->
