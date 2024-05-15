@@ -1,0 +1,76 @@
+<!DOCTYPE html> <!-- Capítulo 21 - Aula 10 -->
+<html lang="pt-br"> <!-- Minha solução para p exercício -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <th scope="col">Grupo</th>
+            <th scope="col">Nomes</th>
+            <th scope="col" colspan="3">Filmes</th>
+        </thead>
+
+        <tbody>
+            <tr> <!-- Fiz tudo numa <tr> só, funcionou, mas não é o ideal. Preste mais atenção nas próximas! -->
+                <th scope="row" rowspan="3">Mulheres</th>
+                <td>Ana Maria Santos</td>
+                <td>Alien</td>
+                <td>Rambo</td>
+                <td>Vingadores</td>
+                <tr> <!-- Perceba que eu fiz outra linha dentro da mesma linha, sem fechá-la. Apesar de ter dado certo, não é o correto. -->
+                    <td>Beatriz Souza</td>
+                    <td>Hulk</td>
+                    <td>Inception</td>
+                    <td>Batman</td>
+                </tr>
+                <tr>
+                    <td>Cláudia Melo</td>
+                    <td>Oblivion</td>
+                    <td>Matrix</td>
+                    <td>Big Hero</td>
+                </tr>
+            </tr> <!-- Só fechei a linha aqui, mas não deveria. O correto são várias linhas, não uma linha com várias linhas. Apesar de eu ter feito assim e ter funcionado, não é o certo. -->
+            <tr>
+                <th scope="row" rowspan="3">Homens</th>
+                <td>Bruno Mendonça</td>
+                <td>Intocáveis</td>
+                <td>Amnésia</td>
+                <td>Gladiador</td>
+                <tr> <!-- Cometi o mesmo erro de lá de cima, na parte de mulheres -->
+                    <td>Daniel Lourenço</td>
+                    <td>Wall-E</td>
+                    <td>Oldboy</td>
+                    <td>Dangal</td>
+                </tr>
+                <tr>
+                    <td>Fabiano Mota</td>
+                    <td>Star Wars 5</td>
+                    <td>Taxi Driver</td>
+                    <td>Toy Story</td>
+                </tr>
+            </tr> <!-- Mesmo erro do fechamento da linha que fiz antes -->
+        </tbody>
+    </table>
+</body>
+</html>
+
+<!--
+    Eu também errei os escopos, mas não sabia que existiam escopos de grupo...
+-->
