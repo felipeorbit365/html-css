@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Capítulo 22 - Aula 1 e 2 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos de iframe</title>
+    <style>
+        iframe {
+            width: 400px;
+            height: 400px;
+            border: 1px dashed black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando o uso de um iframe</h1>
+    <p>
+        Acessando o site do
+
+        <!-- Tamanho padrão: 300x150px -->
+        <iframe src="https://www.cursoemvideo.com" frameborder="0" height="500" scrolling="no">
+            <a href="https://www.cursoemvideo.com" target="_blank">Curso em Vídeo</a>
+        </iframe>
+        
+        para aprender a programar.
+    </p>
+    <p>
+        O repositório do Guanabara
+
+        <iframe src="https://gustavoguanabara.github.io" frameborder="0" height="500" width="500">
+            no <a href="https://gustavoguanabara.github.io" target="_blank">Github</a>
+        </iframe>
+
+        também é bem legal!
+    </p>
+</body>
+</html>
+
+<!-- 
+    iframe
+    - É um quadro in-line, uma estrutura na mesma linha do texto
+    - Seu tipo de display é in-line
+    - Cria uma janela, uma aba nova, uma nova instância do navegador, mas dentro do site
+    - Existem alguns sites que possuem proteção para que o seu conteúdo não seja exibido dentro de um iframe em páginas de terceiros, nesses casos, a conexão será recusada
+
+    ---
+
+    O tamanho padrão do iframe é 300x150
+    - 300 de largura e 150 de altura
+    - isso é alterável
+
+    Alterando altura e largura
+    - height=""
+    - width=""
+
+    ---
+
+    Se tiver alguma configuração em folhas de estilo CSS, as configurações nas CSS são soberanas e prevalecem, não importa se dentro da tag <iframe> no HTML tenha uma dimensão diferente. 
+
+    Caso não haja nenhum dos dois, as dimensões seguem o padrão 300x150px
+
+    ---
+
+    scrolling=""
+    - Serve para configurar a barra de rolagem do iframe, e ele aceita os seguintes valores: "auto", "yes" e "no".
+    - auto -> é o valor padrão, faz com que a barra de rolagem no iframe apareça e possa ser utilizada normalmente
+    - yes -> força a exibição de uma barra de rolagem, mesmo que o site embutido no iframe não tenha uma
+    - no -> bloqueia a barra de rolagem do site que está embutido no iframe, impedindo o usuário de rolar
+    
+    ---
+
+    frameborder=""
+    - 0 -> tira a borda
+    - 1 -> cria a borda
+    - Para personalizar a borda, basta configurar o border nas configurações das CSS de iframe 
+-->
