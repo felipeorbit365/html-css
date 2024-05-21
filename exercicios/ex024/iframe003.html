@@ -1,4 +1,4 @@
-<!DOCTYPE html> <!-- Capítulo 22 - Aula 4 -->
+<!DOCTYPE html> <!-- Capítulo 22 - Aula 4 e 5 -->
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -28,7 +28,7 @@
 
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id in explicabo unde recusandae neque enim molestias obcaecati totam, assumenda veritatis officia voluptas quaerat culpa fugiat corporis rerum repudiandae vitae ab? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod doloribus perspiciatis quisquam excepturi magni blanditiis harum mollitia porro, reprehenderit maiores facilis repudiandae dignissimos, ipsam rerum. Vitae dignissimos voluptatibus quasi aspernatur!</p>
 
-    <iframe id="tela" name="frame" src="">
+    <iframe id="tela" name="frame" srcdoc="<h1>Escolha uma das opções acima</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id in explicabo unde recusandae neque enim molestias obcaecati totam, assumenda veritatis officia voluptas quaerat culpa fugiat corporis rerum repudiandae vitae ab? Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p><img src='imagens/cursoemvideo.png'>">
         <p>Infelizmente seu navegador não é compatível com isso.</p>
     </iframe>
 
@@ -46,4 +46,11 @@
     - Utilizam-se links, com target apontando para o iframe
     - O iframe PRECISA ter um name
     - O name PRECISA estar indicado no target
+
+    srcdoc=""
+    - Parâmetro que permite colocar linhas em HTML
+    - Permite código básico HTML
+    - Para coisas mais complexas, o melhor é criar arquivos do zero
+    - Serve apenas para criar conteúdo estático de forma pontual
+    - Como tudo está dentro de aspas duplas, o conteúdo utilizado dentro do parãmetro deve estar com aspas simples para funcionar. Por exemplo, para inserir imagens, a escrita deve ser com aspas simples nesse caso
 -->
