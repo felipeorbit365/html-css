@@ -1,0 +1,49 @@
+<!DOCTYPE html> <!-- Capítulo 22 - Aula 4 -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframe</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe#tela {
+            width: 95vw;
+            height: 400px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, officiis accusamus minus exercitationem velit voluptates modi illo iusto aspernatur nemo, quas reprehenderit tempora eum sint obcaecati consequatur. Necessitatibus, quidem repellat.</p>
+
+    <ul>
+        <li><a href="paginas-extras/pag001.html" target="frame">Primeira página</a></li>
+        <li><a href="paginas-extras/pag002.html" target="frame">Segunda página</a></li>
+        <li><a href="paginas-extras/pag003.html" target="frame">Terceira página</a></li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id in explicabo unde recusandae neque enim molestias obcaecati totam, assumenda veritatis officia voluptas quaerat culpa fugiat corporis rerum repudiandae vitae ab? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod doloribus perspiciatis quisquam excepturi magni blanditiis harum mollitia porro, reprehenderit maiores facilis repudiandae dignissimos, ipsam rerum. Vitae dignissimos voluptatibus quasi aspernatur!</p>
+
+    <iframe id="tela" name="frame" src="">
+        <p>Infelizmente seu navegador não é compatível com isso.</p>
+    </iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sed, sequi, asperiores quidem magnam ab vitae eos, blanditiis sit dicta magni officiis vel incidunt! Soluta aut incidunt asperiores consequatur iusto? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium quis cumque dolorem cupiditate fugiat voluptate architecto blanditiis similique commodi quam ullam molestias qui, dolores fuga ad veniam facilis sed repellendus.</p>
+</body>
+</html>
+
+<!--
+    name=""
+    - Faz com que um elemento receba um nome
+    - Permite que seja referenciado no target="", por exemplo, como no exercício em questão
+    - Isso cria navegação, interação, entre páginas o iframe
+
+    NAVEGAÇÃO NO IFRAME
+    - Utilizam-se links, com target apontando para o iframe
+    - O iframe PRECISA ter um name
+    - O name PRECISA estar indicado no target
+-->
