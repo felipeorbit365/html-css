@@ -1,0 +1,42 @@
+<!DOCTYPE html> <!-- Capítulo 22 - Aula 07 -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes</title>
+</head>
+<body>
+    <h1>Meu site principal</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatem placeat est vero beatae cum magnam voluptatum numquam non cumque vel, ex totam deleniti sed porro voluptate corporis vitae sit!</p>
+    <iframe src="paginas-extras/pag004.html" sandbox="allow-same-origin allow-forms allow-scripts" referrerpolicy="no-referrer"">
+        Seu navegador não é compatível com isso...
+    </iframe>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, facere ipsum a eligendi quod quidem eos magni sit praesentium aperiam accusantium velit at tenetur ratione quasi quae reprehenderit molestias earum!</p>
+</body>
+</html>
+
+<!--
+    sandbox="sandbox"
+    - Bloqueia todo e qualquer acesso que outros sites que estejam dentro iframe tentem fazer
+    - Cria uma proteção maior em relação a ataques
+    - Não captura mais nenhum tipo de informação
+    - Isso impede riscos de segurança 
+    - Liga todas as configurações no máximo
+
+    referrerpolicy=""
+    - Política de referência
+    - "no-refere-when-downgrade" -> é o parâmetro padrão
+    - O que está dentro do iframe passa a ser limitado
+    - "no-referrer" -> o conteúdo carregado dentro do iframe NÃO vai coletar nenhum tipo de informação do usuário
+
+    sandbox="sandbox" referrerpolicy="no-referrer"
+    - Juntos, fazem com que o iframe tenha o máximo de segurança possível
+
+    ---
+
+    Há como permitir algumas exceções no sandbox
+
+    - "allow-same-origin" -> permitir conteúdos de mesma origem
+    - "allow=forms" -> permite o uso de formulários
+    - "allow-scripts" -> permite scripts
+-->
