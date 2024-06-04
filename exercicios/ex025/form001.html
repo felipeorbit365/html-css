@@ -1,4 +1,4 @@
-<!DOCTYPE html> <!-- Capítulo 24 - Aula 01 -->
+<!DOCTYPE html> <!-- Capítulo 24 - Aula 01, 02 e 03 -->
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -12,9 +12,13 @@
 </head>
 <body>
     <h1>Meu primeiro formulário</h1>
-    <p>Nome: <input type="text" name="nome" id=""></p>
-    <p>Sobrenome: <input type="text" name="sobrenome" id="sobrenome"></p>
-    <p><input type="submit" value="Enviar"></p>
+    <form action="cadastro.php" autocomplete="off">
+        <p><label for="inome">Nome: </label>
+            <input type="text" name="nome" id="inome"></p>
+        <p><label for="isobrenome">Sobrenome: </label>
+            <input type="text" name="sobrenome" id="isobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
 </body>
 </html>
 
@@ -36,7 +40,68 @@
 
     ENVIO DE DADOS
     - O envio dos dados ainda não foi feito nesse código, ainda é necessário fazer alterações
-    - Entretanto, é válido já pontuar que NÃO há ligação entre o texto o controle (a caixa de resposta) e o texto indicando o que deve ser escrito (por exemplo, "Nome: ")
+    - Entretanto, é válido já pontuar que NÃO há ligação entre o texto e o controle (a caixa de resposta) e o texto indicando o que deve ser escrito (por exemplo, "Nome: ")
     - É importante para os mecanismos de busca saberem dessa ligação, então é necessário fazê-las
     - Para o formulário ser útil, precisa dessas configurações
+
+    autocomplete="off"
+    - Desativa sugestão de coisa para escrever na caixa
+
+    action=""
+    - Ação que é disparada quanto clica no botão de submit
+    - Faz a conexão com uma linguagem de programação
+
+    LIGAÇÃO ENTRE NOME E CAIXA
+    - O sistema não faz ligação direta entre o que está na caixa de resposta e o que é indicado nela. Exemplo: não sabe que a resposta de uma caixa para Nome seja para o nome, nem que uma caixa para Sobrenome seja para o sobrenome. Isso precisa ser feito manualmente.
+
+    <label for="">
+    - Etiquetas
+    - Labels indicam a etiqueta para a caixa de resposta, um nome a ser relacionado
+    - for="" -> coloca-se o id do campo de entrada a ser relacionado à etiqueta
+    - No for="" vai o id do controle que a palavra vai se relacionar
+
+    name="" e id=""
+    - Todos os campos de entrada devem ter name e id
+    - name="" -> útil para HTML e PHP
+    - id="" -> útil para JavaScript e uso de labels
+
+    ---
+
+    - NÃO SE FAZ FORMULÁRIO SEM RELACIONAR O LABEL AO SEU INPUT, SEU CONTROLE, SEU ELEMENTO
+    - É ESSENCIAL SABER QUAL CAIXA ESTÁ RELACIONADA A QUAL LABEL
+
+    ---
+
+    No envio de formulário, em alguns casos, a URL fica:
+
+    /cadastro.php?nome=Felipe&sobrenome=Rodrigues
+
+    ? -> divide os parâmetros 
+    Para não mostrar a resposta da caixa na URL, é necessário fazer alterações manualmente
+
+    ---
+
+    MÉTODOS DE ENVIO DE FORMULÁRIO
+    - method=""
+
+    GET
+    - Método padrão, quando não se coloca nada
+    - Dados visíveis na URL
+
+    POST 
+    - Não mostra nada na URL
+    - Os dados não ficam visíveis na URL
+    - Isso não necessariamente significa proteção dos dados, pois eles ainda podem ser capturados. Por exemplo: no DevTools, acessando Network, Headers e Form Data, os dados inseridos são exibidos
+    - Nos cabeçalhos nas requisições, emissões dos dados, pode ser possível visualizar e capturar os dados no corpo do código. A proteção é feita através de criptografia HTTPS apenas
+    
+    GET e POST - Diferença
+    - GET -> os dados ficam visíveis para o usuário na URL
+    - POST -> os dados não ficam visíveis, mas sem criptografia ainda podem ser encontrados
+    - Um não é mais seguro que o outro
+    - GET é utilizado quando os dados NÃO forem sensíveis (buscas no Google, por exemplo)
+    - GET possibilita o compartilhamento da URL 
+    - GET permite que sejam enviados apenas 3.000 bytes (3.000 letras, aproximadamente) de dados, se ultrapassar, GET não deve ser utilizado
+    - POST para dados sensíveis e arquivos
+    - POST permite que sejam utilizados mais de 3.000 bytes (3.00 letras, aproximadamente)
+    - Apenas a criptografia HTTPS protege dados sensíveis (como senhas e número de cartão de crédito), sem ela, o POST não está protegendo nada
 -->
