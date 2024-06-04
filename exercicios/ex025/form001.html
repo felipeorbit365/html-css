@@ -1,0 +1,42 @@
+<!DOCTYPE html> <!-- Capítulo 24 - Aula 01 -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+    <p>Nome: <input type="text" name="nome" id=""></p>
+    <p>Sobrenome: <input type="text" name="sobrenome" id="sobrenome"></p>
+    <p><input type="submit" value="Enviar"></p>
+</body>
+</html>
+
+<!--
+    FORMULÁRIOS
+    - Todo formulário tem que estar entre as tags <form> e </form>
+
+    CAIXINHA DE RESPOSTA
+    - Para o usuário poder responder o formulário, precisa da caixinha de resposta
+    - A caixinha aparece através do <input>
+    - Para caixa de texto, deve selecionar input:text
+    - Toda caixa de texto deve ter name e id
+    - A tag se completa com o type, name e id ao escrever input:text
+
+    BOTÃO DE ENVIAR
+    - Para enviar a resposta, é necessário o botão de enviar
+    - input:submit cria a tag completa com o type e value
+    - value é o que fica escrito no botão. Caso nada seja escrito, fica um botão vazio
+
+    ENVIO DE DADOS
+    - O envio dos dados ainda não foi feito nesse código, ainda é necessário fazer alterações
+    - Entretanto, é válido já pontuar que NÃO há ligação entre o texto o controle (a caixa de resposta) e o texto indicando o que deve ser escrito (por exemplo, "Nome: ")
+    - É importante para os mecanismos de busca saberem dessa ligação, então é necessário fazê-las
+    - Para o formulário ser útil, precisa dessas configurações
+-->
