@@ -1,0 +1,49 @@
+<!DOCTYPE html> <!-- Capítulo 24 - Aula 4 -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Teste de formulário</h1>
+    <form action="cadastro.php" method="POST" autocomplete="on">
+        <p>
+            <label for="iusu">Usuário: </label>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="30" size="10" placeholder="nome do usuário" autocomplete="username">
+        </p>
+        <p>
+            <label for="isen">Senha: </label>
+            <input type="password" name="sen" id="isen" required minlength="8" maxlength="20" size="8" placeholder="mínimo 8 letras" autocomplete="current-password">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
+
+<!--
+    required
+    - Campo obrigatório
+    - Atributo deve ser colocado dentro do <input>, desse modo, impede com que dados vazios sejam enviados. Se torna obrigatório enviar algo dentro do campo
+    - Isso é um script minivalidador do JavaScript
+
+    minlength / maxlength
+    - Define o comprimento mínimo e máximo a ser preenchido no campo
+
+    size
+    - Define o tamanho da caixa do formulário
+    - Se a resposta ultrapassar o limite de caracteres (por exemplo, numa caixa size="10" que tem como resposta mais de 10 caracteres), cria-se uma rolagem lateral
+    - Não indica quantas letras vai aceitar, indica quantas letras vai mostrar por vez
+
+    placeholder
+    - Indica dentro da caixa uma "dica" do que deve ser escrito como resposta
+
+    autocomplete=""
+    - Na tag <form>, só tem as opções on e off
+    - off desativa a sugestão do navegador para responder algo na caixa
+    - Na prática, geralmente é preferível permitir que o navegador faça essas sugestões
+    - Na tag <input>, com o on ativado, é possível indicar o tipo de sugestão que o navegador deve dar (bday para aniversário, postal-code para código postal, por exemplo)
+-->
