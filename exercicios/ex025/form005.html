@@ -1,0 +1,71 @@
+<!DOCTYPE html> <!-- Capítulo 24 - Aula 08 -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="isxmas" value="M"> <label for="isxmas">Masculino</label><br>
+            <input type="radio" name="sexo" id="isxfem" value="F" checked> <label for="isxfem">Feminino</label><br>
+        </fieldset>
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+            <input type="checkbox" name="esbas" id="iesbas" checked> <label for="iesbas">Basquete</label><br>
+            <input type="checkbox" name="esfut" id="iesfut" checked> <label for="iesfut">Futebol</label><br>
+            <input type="checkbox" name="esnat" id="iesnat"> <label for="iesnat">Natação</label><br>
+            <input type="checkbox" name="esten" id="iesten"> <label for="iesten">Tênis</label><br>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
+
+<!--
+    Minha explicação 
+    
+    RADIO BUTTON
+    - Nos botões de rádio, ou você clica em uma opção, ou clica em outra. Não é possível clicar em duas ao mesmo tempo
+    - É obrigatório que para radio buttons no mesmo fieldset, o name seja o mesmo
+    - A necessidade do name ser o mesmo para radio buttons do mesmo fieldset se dá por conta da questão de que nos botões de rádio só se seleciona uma opção. Se o name dos radio buttons forem diferentes, eles estarão à parte, isto é, não terão outro radio button como "referência" para analisar o que foi marcado ou não
+    - No erro de marcar o name diferentes para radio buttons no mesmo fieldset, uma vez que uma caixa é assinalada, não há como desmarcar, pois não há nada mais para fazer "comparação". Com name diferentes, ele compara apenas a si mesmo
+    - Com name iguais nos radio buttons do mesmo fieldset, eles "pertencem à mesma coisa" e a "comparação" utiliza um ao outro como "referência". Desse modo, a escolha é feita entre um e outro 
+
+    --- 
+
+    Explicação do ChatGPT
+
+    RADIO BUTTON
+    - Os botões de rádio permitem selecionar apenas uma opção entre várias disponíveis. Ao selecionar uma nova opção, a anterior é desmarcada automaticamente.
+    - Para que os radio buttons funcionem corretamente como um grupo de opções mutuamente exclusivas, eles devem compartilhar o mesmo atributo name.
+    - O atributo name sendo o mesmo para todos os radio buttons do grupo é essencial porque é isso que faz com que eles sejam tratados como um conjunto único de opções. Se os name forem diferentes, cada botão será considerado isoladamente e permitirá a seleção múltipla.
+    - Se radio buttons do mesmo conjunto tiverem nomes diferentes, não haverá a funcionalidade de alternância entre as opções, resultando na possibilidade de múltiplas seleções, o que não é o comportamento esperado para radio buttons.
+    - Ao usar o mesmo atributo name, os radio buttons são agrupados, permitindo que apenas uma opção seja selecionada de cada vez. Esse agrupamento é o que garante que ao selecionar uma nova opção, a anterior seja desmarcada automaticamente.
+
+    ---
+
+    checked 
+    - Já marca a opção automaticamente antes da resposta do usuário
+    - O usuário pode remover a opção normalmente
+    - Não é possível colocar mais de um checked nos radio buttons
+
+    ---
+
+    Botões de Rádio
+    - Só pode escolher um deles, uma das opções
+    - Todo botão de rádio que faça parte do mesmo fieldset PRECISA ter o mesmo name
+    - O id é diferente para o funcionamento do label
+    - Retorna um value
+
+    checkbox
+    - São caixas para assinalar
+    - Permite várias opções
+-->
