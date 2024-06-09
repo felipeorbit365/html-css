@@ -1,0 +1,58 @@
+<!DOCTYPE html> <!-- Capítulo 24 - Aula 09 -->
+<html lang="pt-br">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="POST" autocomplete="on">
+        <p>
+            <label for="icor">Cor: </label>
+            <input type="color" name="cor" id="icor" value="#00ff00">
+        </p>
+
+        <p>
+            <label for="inivel">Nível de Satisfação: </label>
+            <input type="range" name="nivel" id="idnivel" min="1" max="5" value="2">
+        </p>
+
+        <p>
+            <label for="ifoto">Foto do perfil: </label>
+            <input type="file" name="foto" id="ifoto">
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
+
+<!--
+    input:color
+    - Começa em preto
+    - Se um value for inserido, já exibe uma cor pré-determinada ao usuário, isto é, não necessariamente preto (exemplo: verde)
+    - Permite a escolha livre da cor
+    - Envia o código hexadecimal
+
+    input:range
+    - Começa no meio (em 50, se for por padrão)
+    - Por padrão, vai de 0 a 100
+    - É possível inserir um min e um max, determinando o intervalo (exemplo: de 1 a 5)
+    - É possível configurar a posição inicial do range. Se inserir um value, não começa mais no meio (exemplo: começar no nível 2)
+
+    input:file
+    - Permite que o usuário carregue um arquivo
+    - Quando utilizar o controle (input) de envio de arquivos, NÃO é possível utilizar o método get
+    - Obrigatoriamente o method do formulário PRECISA ser post para que os arquivos sejam enviados (especificamente nos headers que é possível visualizar no DevTools)
+    - Sempre que se utilizar elementos que passam de 3.000 bytes, é necessário usar o post. O get tem uma limitação para até 3.000, o post permite mais
+
+    ---
+
+    É essencial testar testar em diversos navegadores, pois pode ser que em alguns não funcione e exiba apenas caixas de texto
+    
+    Além disso, a forma como aparecem entre um navegador e outro também tem diferenças
+-->
