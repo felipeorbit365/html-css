@@ -1,0 +1,89 @@
+<!DOCTYPE html> <!-- Capítulo 24 - Aula 10 -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iest">Estado: </label>
+            <select name="estado" id="iest">
+
+                <option value="" selected>--- Escolha ---</option>
+                <optgroup label="Região Sudeste">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <label for="iprof">Profissão: </label>
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <option>Administrador</option>
+                <option>Contabilista</option>
+                <option>Desenvolvedor</option>
+                <option>Professor</option>
+            </datalist>
+        </p>
+
+        <p>
+            <label for="imsg">Mensagem: </label><br>
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
+
+<!--
+    select
+    - Cria botão para selecionar opções em um formulário
+    - Entretanto, é necessário criar essas opções manualmente
+
+    option
+    - Cria as opções para fazerem parte do select
+
+    optgroup
+    - Permite que seja atribuído um elemento label
+    - Agrupa as opções e permite que esse agrupamento receba um nome
+
+    selected
+    - Quando atribuída a uma option, deixa essa opção pré-selecionada, antes da escolha do usuário
+    - Se desejar exibir algo que não seja de fato uma das opções, como "---Escolha---" para indicar que o usuário deve clicar para escolher, o  value="" deve estar vazio
+
+    datalist
+    - Deve ter um id=""
+    - Na caixa de texto input:text, deve ter um atributo list=""
+    - O atributo list="" deve ter o id ="" do datalist
+    - É possível excluir o value="" para que o código da opção não seja exibido ao usuário
+    - É utilizado para caso algo não esteja na lista e o usuário queira digitar
+    - Apresenta uma lista de opções para o usuário como SUGESTÕES, ele ainda pode escrever caso a lista não contemple sua opção
+    - O navegador armazena a sugestão adicionada pelo próprio usuário
+
+    DIFERENÇA - optgroup e datalist
+    - optgroup -> restringe que o usuário escolha apenas alguma das opções dadas
+    - datalist -> sugere uma lista de opções para o usuário selecionar, mas ainda permite que o usuário escreva a sua opção desejada caso não esteja presente
+
+    textarea 
+    - Permite que o usuário digite uma mensagem
+    - cols e rows definem quantas colunas e linhas vão aparecer na tela, não a quantidade máxima permitida. No textarea isso é infinito e podem ser colocadas quanto quiser. O que muda é quantas aparecerão numa só exibição na tela
+    - Ou seja, se for 30 colunas, exibe 30 letras e quebra para a linha seguinte. Depois que ultrapassa 10 linhas, cria-se uma barra de rolagem
+    - A utilização do <br> é útil para quebrar a linha e colocar a "caixa da mensagem" para baixo
+    - Quando se utiliza textarea, o ideal é que o formulário seja do método POST para não ter problema de limitação
+-->
