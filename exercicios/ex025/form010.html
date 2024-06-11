@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="iano">Em que ano você nasceu? </label>
+            <input type="number" name="ano" id="iano" min="1900" max="2024" oninput="calcIdade()">
+        </p>
+
+        <p>
+            <label for="iidade">Sua idade é: </label>
+            <output id="iidade">0</output>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    <script>
+        function calcIdade() {
+            let atual = new Date().getFullYear()
+            iidade.innerHTML = Number(atual) - Number(iano.value)
+        }
+    </script>
+</body>
+</html>
+
+<!--
+
+    oninput de input:number
+    - Quando digitar qualquer coisa nessa caixa, chama a função calcIdade()
+
+    calcIdade()
+    - Para criar essa função, ela deve estar dentro de um <script> e declarada como function
+    - Está fora do <form>
+    - let cria uma variável
+    - new Date().getFullYear pega o ano no sistema e atribui à variável atual
+    - iidade é output que exibirá a idade do usuário após o cálculo
+    - iidade.innerHTML = Number(atual) - Number(iano.value) -> o ano atual é subtraído pelo iano inserido pelo usuário e, assim, o .innerHTML atribui à iidade, exibindo no output 
+    - atual não precisa de .value, pois não é um objeto
+    
+
+-->

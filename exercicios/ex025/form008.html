@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="in1">Número 1: </label>
+            <input type="number" name="n1" id="in1" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+
+        <p>
+            <label for="in2">Número 2: </label>
+            <input type="number" name="n2" id="in2" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+            
+        <p>
+            <label for="isoma">Soma: </label>
+            <output name="soma" id="isoma">0</output>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
+
+<!--
+    output
+    - Campo que só exibe algo, o visitante não pode alterar
+
+    .innerHTML e oninput
+    - Quando entrar com dados no HTML, faz com que "retorne" o resultado no oninput
+    - O output exibe esse resultado, apenas
+    - O output não calcula e não envia nada, só "calcula" e envia
+
+    ---
+
+    Explicação do código
+    - Não precisa se atentar nisso por agora, já que a parte de JavaScript deve ser estudada com sua própria atenção posteriormente
+
+    oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)"
+    - isoma é 0 (o output)
+    - O que estiver dentro de output [ isoma.innerHTML ] é igual à soma do valor de in1 e in2 [ Number(in1.value) + Number(in2.value) ]
+    - A mesma linha foi colocada tanto no in1, quanto no in2, para que a conta fosse feita tanto na alteração de in1, quanto na alteração de in2. Se não estivesse nos dois, não teria essa "interação" entre os dois valores para o cálculo
+
+    --- 
+
+    Explicação do ChatGPT sobre o código
+
+    oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)"
+
+    oninput: Este evento ocorre toda vez que o valor do campo de entrada é alterado.
+    isoma.innerHTML: Refere-se ao conteúdo HTML dentro do elemento com ID "isoma".
+    Number(in1.value): Converte o valor do campo "in1" (Número 1) para um número.
+    Number(in2.value): Converte o valor do campo "in2" (Número 2) para um número.
+    Number(in1.value) + Number(in2.value): Soma os valores dos dois campos.
+    isoma.innerHTML = ...: Atualiza o conteúdo do elemento "isoma" com o resultado da soma.
+
+    Por Que o Código Aparece Duas Vezes
+    O trecho oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)" aparece duas vezes, uma vez para cada campo de entrada (Número 1 e Número 2). Isso é necessário porque queremos que a soma seja recalculada e exibida sempre que qualquer um dos dois valores seja alterado. Se este código fosse adicionado apenas a um dos campos, a soma só seria atualizada quando o valor desse campo fosse alterado, ignorando mudanças no outro campo.
+
+    Por Que Atualizar a Soma Imediatamente
+    No contexto deste formulário, queremos que a soma dos números seja atualizada e mostrada automaticamente toda vez que você digitar algo em qualquer uma das duas caixas (Número 1 e Número 2). Isso é importante para fornecer feedback em tempo real ao usuário, mostrando a soma instantaneamente sem precisar de um botão "Calcular" ou esperar que o formulário seja enviado.
+
+    Por Que Não Calcular no Final?
+    Se você só quisesse calcular a soma e mostrar o resultado no final, ao clicar em um botão, você não precisaria do código oninput nos campos de entrada. Porém, isso não forneceria uma experiência interativa e imediata ao usuário. 
+
+    Exemplo Prático
+
+    Você digita "10" na caixa "Número 1":
+    O código faz a soma de "10" (Número 1) e o valor atual da caixa "Número 2" (digamos que seja "5").
+    Mostra a soma "15".
+
+    Você digita "20" na caixa "Número 2":
+    O código faz a soma do valor atual da caixa "Número 1" (ainda "10") e "20" (Número 2).
+    Mostra a soma "30".
+    
+    Por isso, o código oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)" aparece duas vezes: uma vez em cada campo, para garantir que a soma seja atualizada sempre que você alterar qualquer um dos números.
+-->
