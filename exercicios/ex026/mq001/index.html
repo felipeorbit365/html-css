@@ -1,0 +1,59 @@
+<!DOCTYPE html> <!-- Capítulo 25 - Aula 02 -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <!-- Chamadas de Media Query -->
+    <link rel="stylesheet" href="estilos/tela.css" media="screen">
+    <link rel="stylesheet" href="estilos/impressora.css" media="print">
+</head>
+<body>
+    <header>
+        <h1>Notícias</h1>
+        <menu>
+            <ul>
+                <li>Esportes</li>
+                <li>Política</li>
+                <li>Tecnologia</li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Estou aprendendo a criar Media Queries</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas impedit enim, hic consequuntur doloribus adipisci deleniti reprehenderit mollitia tenetur vel accusantium in quasi laudantium explicabo ea maiores, consectetur amet. Voluptates? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, nisi sequi. Voluptatibus eaque, tenetur, officia illo nobis laudantium cum eius corporis iste ipsam aliquam earum. Recusandae accusantium eum ipsum eveniet.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas impedit enim, hic consequuntur doloribus adipisci deleniti reprehenderit mollitia tenetur vel accusantium in quasi laudantium explicabo ea maiores, consectetur amet. Voluptates? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, nisi sequi. Voluptatibus eaque, tenetur, officia illo nobis laudantium cum eius corporis iste ipsam aliquam earum. Recusandae accusantium eum ipsum eveniet.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas impedit enim, hic consequuntur doloribus adipisci deleniti reprehenderit mollitia tenetur vel accusantium in quasi laudantium explicabo ea maiores, consectetur amet. Voluptates? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, nisi sequi. Voluptatibus eaque, tenetur, officia illo nobis laudantium cum eius corporis iste ipsam aliquam earum. Recusandae accusantium eum ipsum eveniet.</p>
+        </article>
+    </main>
+</body>
+</html>
+
+<!--
+    Media Queries são utilizadas para que sites sejam ajustados de formas diferentes, de acordo com o dispositivo que estiver sendo utilizado.
+
+    Por exemplo: a forma como um site aparece na tela de um computador e de um celular são diferentes. Essa responsividade que varia de acordo com o dispositivo se dá através de Media Queries. 
+
+    ---
+
+    media="screen"
+    - Relaciona um determinado arquivo CSS apenas para exibição em telas
+
+    media="print"
+    - Relaciona um determinado arquivo CSS apenas para tipos de impressão
+
+    media="all" 
+    - Relaciona um arquivo CSS a todos os tipos possíveis
+
+    --- 
+
+    No exemplo, foram criados dois estilos diferentes para dois tipos de mídia diferentes. No começo do código, são feita as chamadas dessas Media Queries. 
+
+    media="screen" e media="print" são apenas media types, uma para tela e a outra para impressoras.
+    Entretanto, isso não especifica muito bem, pois pode ser tela de celular, de computador, notebook e em outros, por exemplo. Pode ser qualquer tela, o que limita seu funcionamento.
+
+    Além das media types, existem as media features. Com elas é possível, dentro da tela, definir o tamanho desejado para cada determinada versão.
+-->
