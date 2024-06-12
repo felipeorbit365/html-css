@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link rel="stylesheet" href="estilos/style.css" media="all">
+    <link rel="stylesheet" href="estilos/retrato.css" media="screen and (orientation: portrait)">
+    <link rel="stylesheet" href="estilos/paisagem.css" media="screen (orientation: landscape)">
+</head>
+<body>
+    <h1>Mude a orientação do seu dispositivo</h1>
+</body>
+</html>
+
+<!--
+    media="all"
+    - Configuração que vale para todos os dispositivos
+    - Serve para todos, ambos os modos
+
+    media features
+    - Devem ser indicados ISOLADAMENTE entre parênteses
+    - Cada media feature tem seus próprios parênteses
+    - Faz configurações adicionais que não estejam no estilo principal (por exemplo: ajustes para telas modo retrato e ajustes para telas em modo paisagem)
+
+    media="screen and (orientation: portrait)"
+    - Media Query que une o Media Type screen com o Media Feature (orientation: portrait) 
+    - O arquivo CSS dá as configurações para todas as telas que estejam em modo retrato (em pé)
+
+    media="screen and (orientation: landscape)"
+    - Media Query que une o Media Type screen com o Media Feature (orientation: landscape) 
+    - O arquivo CSS dá as configurações para todas as telas que estejam em modo paisagem (deitado)
+-->
