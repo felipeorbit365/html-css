@@ -1,0 +1,74 @@
+<!DOCTYPE html> <!-- Capítulo 25 - Aula 05 -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        /* Declarações gerais */
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html, body {
+            width: 100vw;
+            height: 100vh;
+            background-color: #233eff;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            color: white;
+            text-shadow: 2px 2px 0px #1526a7;
+            padding: 10px;
+        }
+
+        /* Declarações de retrato */
+        @media screen and (orientation: portrait) {
+            body {
+                background-image: url(../imagens/cev-portrait.jpg);
+                background-position: center bottom;
+            }
+        }
+
+        /* Declarações de paisagem */
+        @media screen and (orientation: landscape) {
+            body {
+                background-image: url(../imagens/cev-landscape.jpg);
+                background-position: left bottom;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Mude a orientação do seu dispositivo</h1>
+</body>
+</html>
+
+<!--
+    - Forma alternativa para não precisar fazer vários arquivos CSS
+    - Utilizada para projetos pequenos
+    - Tudo dentro do <style>
+    - As declarações gerais, de retrato e de paisagem são unificadas no mesmo CSS
+
+    @media
+    - OBRIGATÓRIO para o funcionamento do Media Query
+    - Dentro das chaves, é necessário fazer todas as declrações de acordo
+    - O seletor fica dentro do @media
+
+    ---
+
+    OUTRO MODO DE FAZER
+    -  Para isso, a tag <style> deve ser removida e substituída por um link:css
+
+    É possível deixar todas as declarações unificadas, mas num mesmo arquivo CSS externo
+    Dentro desse arquivo CSS externo, referenciado no index.html, é preciso seguir a exata mesma forma de declarações que haviam sido feitas no <style> anteriormente - isto é, utilizando @media
+    De tal modo, o que foi feito utilizando um <style> internamente, pode ser utilizado em apenas um arquivo CSS externo
+    
+    Os dois modos são alternativas possíveis para reunir tudo em único CSS, o que muda é a forma de fazer, variando da preferência entre utilizar CSS internas ou externas
+
+    A pasta mq003b mostra essa outra forma de fazer.
+-->
