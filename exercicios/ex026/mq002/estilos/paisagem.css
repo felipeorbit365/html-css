@@ -1,3 +1,18 @@
 @charset "UTF-8";
 
 /* Configurações para aparelho deitado (landscape) */
+
+body {
+    background-image: url(../imagens/cev-landscape.jpg);
+    background-position: left bottom;
+}
+
+/*
+O modo paisagem está com um "erro" onde, inicialmente, a imagem não está "grudada" à parte inferior da janela. Fazendo uma alteração somente nas configurações do modo paisagem, é possível resolver
+
+background-position: left bottom;
+- Coloca a posição da imagem grudada no canto esquerdo e na parte de baixo do site
+
+Não se altera as configurações gerais, nesse caso, pois esse ajuste deve acontecer especificamente desse jeito no modo paisagem. 
+Se fossem o mesmo, poderia estar no genérico, mas são DIFERENTES, portanto, devem ter adaptação de modo próprio.
+*/

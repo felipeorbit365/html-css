@@ -1,3 +1,39 @@
 @charset "UTF-8";
 
 /* Configurações gerais */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #233eff;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: white;
+    text-shadow: 2px 2px 0px #1526a7;
+    padding: 10px;
+}
+
+/* 
+Essas são as configurações gerais, valem para todos os tipos de exibição do site.
+De tal modo, não é prático refazer toda essa parte nas configurações de modo retrato e de paisagem, já que esse estilo estará presente independentemente da orientação do dispositivo.
+
+media="all" -> configuração que vale para todos os tipos de mídia
+- O arquivo style.css está válido para TODOS os tipos de mídia
+
+---
+
+background-size: contain;
+- É melhor que seja contain, não cover, para mostrar a imagem apropriadamente
+
+background-repeat: no-repeat;
+- Configuração para a imagem de fundo não repetir e ficar apropriada depois do uso do contain
+*/

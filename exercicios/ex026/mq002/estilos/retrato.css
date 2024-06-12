@@ -1,3 +1,19 @@
 @charset "UTF-8";
 
 /* Configurações para aparelho em pé (portrait) */
+
+body {
+    background-image: url(../imagens/cev-portrait.jpg);
+    background-position: center bottom;
+}
+
+/*
+Para garantir que no modo retrato a imagem ficará grudada na parte inferior do site, mas ainda centralizada, é possível ajustar sua posição especificamente nesse modo
+
+background-position: center bottom;
+- Coloca a posição da imagem grudada no meio e na parte de baixo do site
+
+Não se altera as configurações gerais, nesse caso, pois esse ajuste deve acontecer especificamente desse jeito no modo retrato
+Se fossem o mesmo, poderia estar no genérico, mas são DIFERENTES, portanto, devem ter adaptação de modo próprio
+*/
+

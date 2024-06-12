@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Capítulo 25 - Aula 03 e 04 -->
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <title>Media Query</title>
     <link rel="stylesheet" href="estilos/style.css" media="all">
     <link rel="stylesheet" href="estilos/retrato.css" media="screen and (orientation: portrait)">
-    <link rel="stylesheet" href="estilos/paisagem.css" media="screen (orientation: landscape)">
+    <link rel="stylesheet" href="estilos/paisagem.css" media="screen and (orientation: landscape)">
 </head>
 <body>
     <h1>Mude a orientação do seu dispositivo</h1>
@@ -30,4 +30,18 @@
     media="screen and (orientation: landscape)"
     - Media Query que une o Media Type screen com o Media Feature (orientation: landscape) 
     - O arquivo CSS dá as configurações para todas as telas que estejam em modo paisagem (deitado)
+
+    -> PRECISA TER O AND <- 
+    
+    ---
+
+    -  media type screen está presente em ambos, mas a orientação diferente dessas telas é definida através do media feature
+    - As configurações genéricas do media type all permanecem, pois vale para todos, não importa o que mais haja
+    - Por exemplo: as configurações gerais prevalecem, mesmo com as diferentes orientações
+    - O media type screen precisa ser especificado, mesmo com o media type all anteriormente, para garantir que indique como funcionam os ajustes de orientação. Sendo assim, esses estilos específicos devem ser aplicados apenas em telas de dispositivos, e não em outras mídias
+
+    - Explicação do ChatGPT: 
+    O media type screen precisa ser especificado, mesmo com o media type all anteriormente, para garantir que os ajustes de orientação se apliquem somente a telas de dispositivos. Isso é necessário porque, sem a especificação de screen, esses estilos poderiam ser aplicados em outras mídias, como impressoras, o que geralmente não é desejado para estilos baseados em orientação de tela
+    - all garante que o estilo geral (style.css) seja aplicado em todos os tipos de mídia
+    - screen com orientação específica (screen and (orientation: portrait) e screen and (orientation: landscape)) garante que os estilos específicos para orientação sejam aplicados somente em telas de dispositivos, evitando a aplicação indevida desses estilos em outras mídias
 -->
