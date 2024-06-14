@@ -4,8 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
+    <link rel="stylesheet" href="estilos/style.css" media="all">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
 <body>
-    
+    <main>
+        <h1>Testando Media Queries</h1>
+        <img id="phone" src="imagens/icon-phone.png" alt="Acessando via smartphone">
+        <img id="tablet" src="imagens/icon-tablet.png" alt="Acessando via tablet">
+        <img id="print" src="imagens/icon-print.png" alt="Versão para impressão">
+        <img id="pc" src="imagens/icon-pc.png" alt="Versão para desktop">
+        <img id="tv" src="imagens/icon-tv.png" alt="Versão para TV">
+    </main>
 </body>
 </html>
+
+<!--
+    Nas CSS desse projeto, a versão principal e com todas as configurações é a Mobile First, nomeada como style.css
+    - media="all" -> funcional para todos os tipos, não necessariamente a da tela de um celular
+    
+    O arquivo media-query.css é a versão que unificará todos os diferentes tipos de configurações de mídias diferentes em um arquivo só
+    Sendo assim, os ajustes para indicar as diferentes configurações para vários tipos de telas e versão para impressão, por exemplo, serão indicados dentro do próprio arquivo CSS
+    - @media tipo de mídia {
+    }
+
+    ---
+
+    
+--> 

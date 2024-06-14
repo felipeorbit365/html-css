@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+/* Todas as demais mídias */
+
+/* Typical Device Breakpoints
+------------------------------
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200px
+*/
+
+@media print { /* IMPRESSÃO */
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+        background-image: url(../imagens/back-print.jpg); /* Não funciona, foi colocado apenas para mostrar que não é útil em impressões */
+    }
+
+    main {
+        width: 90vw;
+        border: 2px solid black;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    main::after {
+        content: 'Essa impressão foi feita através do site www.cursoemvideo.com';
+        text-decoration: overline;
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#print { display: block; }
+    img#pc { display: none; }
+    img#tv { display: none; }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) { /* TABLET */
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: block; }
+    img#print { display: none; }
+    img#pc { display: none; }
+    img#tv { display: none; }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) { /* DESKTOP */
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#print { display: none; }
+    img#pc { display: block; }
+    img#tv { display: none; }
+}
+
+@media screen and (min-width: 1200px) { /* GRANDES TELAS */ 
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    main {
+        width: 700px;
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#print { display: none; }
+    img#pc { display: none; }
+    img#tv { display: block; }
+}
+    
+
+/*
+Mobile First
+- Desenvolver um site do zero pensando na execução em dispositivos móveis
+
+Typical Device Breakpoints
+- Medidas utilizadas para definir o tamanho de telas de diferentes dispositivos
+
+---
+
+O style.css foi desenvolvido com Mobile First, então não é necessário fazer os media queries para pequenas telas e celulares, já que essas definições já foram utilizadas na criação do site originalmente
+
+Entretanto, se fosse fazer, seria assim:
+
+@media screen and (max-width: 600px) {
+--- Para pequenas telas
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+--- Para celular
+}
+
+---
+
+Nesse caso, a única modifcação entre os diferentes tipos de media é nas imagens. 
+
+As configurações são herdadas do arquivo CSS principal - style.css -, de modo com que as medias só alterem o que foi listado aqui, de acordo com o tamanho da tela do dispositivo que está fazendo o acesso
+A configuração geral já foi feita em Mobile First, isto é, pensando em pequenas telas e celulares, por isso se torna dispensável incluí-las aqui
+
+--- 
+
+O ícone do dispositivo a aparecer é alterado de acordo com os img# e a forma como o display está listado
+Se for none, não aparece. Se for block, aparece
+Sendo assim, é necessário alterar de acordo com o ícone que desejar que apareça a cada diferente tipo de tamanho
+
+---
+
+É possível fazer alterações pontuais se desejar também. Na parte de grandes telas, por exemplo, o width do main foi alterado para ser 700px
+Essa alteração, obviamente, só ocorre em grandes telas
+
+---
+
+Para impressão, NÃO se utiliza back-ground image, pois não imprime o fundo do site
+
+Além disso, outras alterações pontuais foram feitas para a versão de impressão com o objetivo de deixar mais funcional
+
+---
+
+De tal modo, são criadas várias versões de um mesmo projeto 
+
+Foi feito um arquivo - style.css - com as configurações gerais pensando no formato em Mobile First, mas válido para todos
+
+A partir desse arquivo, foi feito outro - media-query.css - com os ajustes de acordo com a tela de diferentes dispositos, pequenas configurações para diferentes mídias
+
+Entretanto, caso o arquivo seja grande demais, é melhor fazer um para cada, sem unificar todos os tipos de mídia no mesmo arquivo. Isso é melhor para organizar
+*/
