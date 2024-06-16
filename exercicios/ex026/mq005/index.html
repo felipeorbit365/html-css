@@ -6,8 +6,9 @@
     <title>Media Query</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu Site</h1>
         <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
@@ -32,6 +33,15 @@
         </article>
     </main>
     <script>
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
         function clickMenu() {
             if (itens.style.display == 'block') {
                 itens.style.display = 'none'
@@ -59,7 +69,7 @@ Explicações da parte de JavaScript
 
 onclick=""
 - Quando clicar, executa uma funcionalidade
-- No caso, click
+- No caso, clickMenu()
 
 clickMenu()
 - A função é criada através de um script local com a tag <script>
@@ -73,4 +83,36 @@ Fluxo da condicional if
 2. Senão, se estiver escondido, isto é, se for none - e por padrão estará, já que é o que define as CSS -> os itens recebem block e faz com que sejam exibidos
 - Por padrão, os itens estão escondidos, com none. A condicional analisa se está block ou none e, por estar none, faz com que execute o else e transforme block. Ao clicar no menu novamente, agora block, a condicional analisa novamente e, por estar block, executa o if e transforma em none
 - A condicional faz com que os itens apareçam quando clicar no menu, assim como também faz com que os itens fiquem escondidos de novo caso o menu seja clicado novamente
+
+---
+
+Diferentes tipos de mídia
+- Há 3 chamadas stylesheet: para o símbolo do menu hambúrguer, para com o estilo genérico desenvolvido a partir do Mobile First e outro para as demais media queries
+
+style.css -> configurações gerais, desenvolvido a partir do Mobile First
+media-query.css -> demais media queries, com alterações feitas a partir do que havia sido feito em Mobile First, mas agora pensando em outros tipos de tela e fazendo os ajustes necessários para isso
+
+--- 
+
+Monitoramento da tela em JavaScript para resolver o problema da exibição das opções do menu que aconteceu nas CSS
+
+onresize="mudouTamanho()"
+- Colocado no <body>
+- Quando mudar o tamanho do site, executa uma funcionalidade 
+- No caso, mudouTamanho()
+
+mudouTamanho()
+- A função é criada através de um script local com a tag <script>
+- Para criar a função, é necessário declarar como function
+
+Fluxo da condicional if
+1. Se a largura da tela - window.innerWidth - for maior ou igual a 768px -> faz com que os itens sejam block, mostra em block forçadamente
+2. Senão, isto é, se a largura da tela não for maior ou igual a 768px -> faz com que os itens sejam não, não são exibidos
+- A condicional analisa a largura da tela, se for maior ou igual a 768px, força automaticamente a exibição do menu
+- Com essa alteração, as opções são exibidas após o aumento da tela, corrigindo o erro, através da execução do if que atribui block. Senão, caso a tela for pequena ou um celular, ou seja, menor que 768px, não exibe as opções, executando o else e atribuindo none 
+
+---
+
+Pequenas telas e celulares (menor de 768px) -> com menu de hambúrguer, exibindo as opções ao clicar
+Tablets, desktops e grandes telas (maior ou igual a 768px) -> sem menu de hambúrguer, exibindo as opções por padrão
 -->

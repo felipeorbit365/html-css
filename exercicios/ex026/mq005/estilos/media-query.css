@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+/* Todas as demais mídias */
+
+/* Typical Device Breakpoints
+------------------------------
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200px
+*/
+
+@media screen and (min-width: 768px) {
+    #burguer {
+        display: none;
+    }
+
+    menu {
+        display: block;
+    }
+
+    menu > ul > li {
+        display: inline-block;
+    }
+
+    main {
+        width: 768px;
+    }
+}
+
+/*
+Pequenas telas e celulares, por padrão, exibem o menu do hambúrguer. Isso foi definido a partir das configurações gerais, já que foi desenvolvido pensando em Mobile First
+
+---
+
+@media screen and (min-width: 768px)
+- Executa esse tipo de mídia se a tela tiver uma largura de, no mínimo, 768px ou mais
+- Isto é, não executa mais os ajustes para pequenas telas e celulares e sim os para tablets, desktops e grandes telas
+- Pequenas telas e celulares -> menos de 768px -> exibe menu do hambúrguer
+- Tablet, desktop e grandes telas -> 768px ou mais -> não exibe o menu do hambúrguer
+- Nesse caso, não é necessário fazer um media feature para cada tipo de typical device breakpoint. No exerício em questão, apenas uma alternativa para não exibir o menu de hambúrguer já basta
+- Isso faz com que o sistema mostre o menu de hambúrguer apenas em pequenas telas e celulares
+
+---
+
+min-width: [valor]
+-> Precisa de [valor], no mínimo, para algo ser executado
+
+---
+
+Alterações para telas de no mínimo ou acima de 768px de largura
+
+display: none; em #burguer -> faz o símbolo do hambúrguer sumir
+
+display: block; em menu -> como o display: none; em #burguer fez tudo sumir, o display: block; em menu faz com que as opções apareçam
+
+display: inline-block; em menu > ul > li -> faz com que as opções não apareçam uma abaixo da outra e sim ao lado
+
+width: 768px em main -> define que, em telas grandes, o main tenha uma largura fixa de 768px. Isso significa que o main cresce até a tela ficar 768px e, se a tela for maior que isso, o main continua fixo em 768px. O main, nesse exercício, é a área em branco. Nas pequenas telas e celulares, o valor fixo é de 90vw
+
+---
+
+Entretanto, há um problema. Ao clicar no menu, fazendo aparecer e esconder, depois modificar o tamanho da janela, as opções param de aparecer em grandes telas
+
+O JavaScript, nesse caso, é útil para monitorar o tamanho da tela
+*/
